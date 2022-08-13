@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/relevance"
+        android:title="Relevance"
+        />
+    <item
+        android:id="@+id/rating"
+        android:title="Ratings"
+        />
+    <item
+        android:id="@+id/coupons"
+        android:title="Coupons"
+        />
+    <item
+        android:id="@+id/numberOfFollow"
+        android:title="Number of Follow"
+       />
+</menu>

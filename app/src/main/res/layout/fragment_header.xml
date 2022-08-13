@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="false"
+    android:focusable="false"
+    android:focusableInTouchMode="true">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glHorizontal0.05"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.05" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glHorizontal0.12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.12" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/etSearch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_10"
+        android:background="@drawable/et_shape"
+        android:drawableStart="@drawable/ic_search"
+        android:hint="@string/search_hint"
+        android:paddingStart="@dimen/dp_10"
+        android:paddingTop="@dimen/dp_6"
+        android:paddingEnd="@dimen/dp_35"
+        android:paddingBottom="@dimen/dp_6"
+        android:textColor="@android:color/black"
+        app:layout_constraintBottom_toBottomOf="@id/glHorizontal0.05"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="@id/glHorizontal0.05" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnAddAList"
+        android:layout_width="@dimen/dp_80"
+        android:layout_height="@dimen/dp_25"
+        android:layout_marginEnd="@dimen/dp_10"
+        android:background="@drawable/tv_style"
+        android:drawableStart="@drawable/ic_add"
+        android:padding="@dimen/dp_5"
+        android:text="@string/add_a_listing"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_10"
+        app:layout_constraintBottom_toBottomOf="@id/glHorizontal0.05"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/glHorizontal0.05" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnLocation"
+        android:layout_width="@dimen/dp_80"
+        android:layout_height="@dimen/dp_20"
+        android:layout_marginEnd="@dimen/dp_15"
+        android:background="@android:color/transparent"
+        android:drawableEnd="@drawable/ic_drop_down"
+        android:fontFamily="sans-serif-condensed"
+        android:padding="@dimen/dp_3"
+        android:text="@string/location"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:textSize="@dimen/sp_10"
+        app:layout_constraintBottom_toBottomOf="@id/glHorizontal0.12"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/glHorizontal0.12" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnSort"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dp_20"
+        android:layout_marginEnd="70dp"
+        android:background="@drawable/btn_sort"
+        android:drawableEnd="@drawable/ic_drop_down"
+        android:drawableTint="@color/blue"
+        android:fontFamily="sans-serif-condensed"
+        android:padding="@dimen/dp_3"
+        android:text="@string/sort_by_relevance"
+        android:textAllCaps="false"
+        android:textColor="@color/blue"
+        android:textSize="@dimen/sp_10"
+        app:layout_constraintBottom_toBottomOf="@id/glHorizontal0.12"
+        app:layout_constraintEnd_toEndOf="@id/btnListOrMap"
+        app:layout_constraintTop_toTopOf="@id/glHorizontal0.12"
+        app:layout_constraintVertical_bias="0.521" />
+
+    <androidx.appcompat.widget.AppCompatToggleButton
+        android:id="@+id/btnListOrMap"
+        android:layout_width="@dimen/dp_55"
+        android:layout_height="@dimen/dp_20"
+        android:layout_marginEnd="@dimen/dp_15"
+        android:background="@android:color/transparent"
+        android:drawableStart="@drawable/ic_list"
+        android:fontFamily="sans-serif-condensed"
+        android:padding="@dimen/dp_3"
+        android:textColor="@color/blue"
+        android:textOff="@string/list"
+        android:textOn="@string/map"
+        android:textSize="@dimen/sp_10"
+        app:layout_constraintBottom_toBottomOf="@id/glHorizontal0.12"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/glHorizontal0.12" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvHome"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scrollbarStyle="outsideOverlay"
+        android:scrollbarThumbVertical="@drawable/scrollbar"
+        android:scrollbars="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
